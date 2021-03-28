@@ -1,60 +1,64 @@
-page {
-    background-color: #ffffff;
-    color: $primary-text-color;
-    font-family: Roboto, sans-serif;
-  }
-  
-  /*контейнер*/
-  .container {
-    width: $width-container;
-    padding-left: 15px;
-    padding-right: 15px;
-    margin-left: auto;
-    margin-right: auto;
-
-    @media screen and (min-width: 320px) {
-      width: 320px;
-  }
-
-@media screen and (min-width: $mobile) {
-  width: $mobile;
+body {
+  background-color: #ffffff;
+  color: $primary-text-color;
+  font-family: Roboto, sans-serif;
 }
 
-@media screen and (min-width: $tablet) {
-  width: $tablet;
+/*когда открыта модалка - не дает скроллить контент на фоне*/
+body.modal-open {
+  overflow: hidden;
 }
 
-@media screen and (min-width: $desctop) {
-  width: $desctop;
+/*контейнер*/
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media screen and (min-width: 320px) {
+    width: 320px;
+  }
+
+  @media screen and (min-width: $mobile) {
+    width: $mobile;
+  }
+
+  @media screen and (min-width: $tablet) {
+    width: $tablet;
+  }
+
+  @media screen and (min-width: $desctop) {
+    width: $desctop;
   }
 }
 
+/*секции*/
+.section {
+  letter-spacing: 0.03em;
+  padding-top: 60px;
+  padding-bottom: 60px;
 
-  
-  /*секции*/
-  .section {
-    padding-top: 60px;
-    padding-bottom: 60px;
-    letter-spacing: 0.03em;
-  
+  /*ноут*/
   @media screen and (min-width: $desctop) {
     padding-top: 94px;
     padding-bottom: 94px;
   }
 }
-  
-  .section__title {
-    margin-top: 0;
-    margin-bottom: 30px;
-  
-    font-weight: 700;
-    font-size: 28px;
+
+.section__title {
+  margin-top: 0;
+  margin-bottom: 30px;
+
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1.179;
+  text-align: center;
+
+  /*ноут*/
+  @media screen and (min-width: $desctop) {
+    margin-bottom: 50px;
+    font-size: 36px;
     line-height: 1.17;
-    text-align: center;
-    
-    @media screen and (min-width: $desctop) {
-      margin-bottom: 50px;
-      font-size: 36px;
-      line-height: 1.17;
-    }
   }
+}

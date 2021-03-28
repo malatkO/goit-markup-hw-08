@@ -1,10 +1,12 @@
+/*---ПЕРЕЧЕНЬ ОСОБЕННОСТЕЙ---*/
 .features {
+  /*ноут*/
   @media screen and (min-width: $desctop) {
     padding-bottom: 0;
   }
 }
 
-  .features__list {
+.features__list {
   padding: 0;
   margin: 0;
 
@@ -18,71 +20,71 @@
     margin-left: calc(-1 * #{$card-set-gap});
   }
 }
-  
-  /*сетка*/
-  .features__item {
-    /*мобильный*/
-    &:not(:last-child) {
-      @media screen and (max-width: 767px) {
-        margin-bottom: $card-set-gap;
-      }
-    }
-  
-    /*планшет*/
-    @media screen and (min-width: $tablet) {
-      flex-basis: calc(100% / 2 - #{$card-set-gap});
-      margin-top: $card-set-gap;
-      margin-left: $card-set-gap;
-    }
-  
-    /*ноут*/
-    @media screen and (min-width: $desctop) {
-      flex-basis: calc(100% / 4 - #{$card-set-gap});
+
+/*сетка*/
+.features__item {
+  /*мобильный*/
+  &:not(:last-child) {
+    @media screen and (max-width: 767px) {
+      margin-bottom: $card-set-gap;
     }
   }
-  
-  /*иконки*/
-  .features__icon {
-    margin-bottom: #{$card-set-gap};
-    max-height: 120px;
-    padding: 25px 110px;
-    max-width: 350px;
-  
-    background-color: $portfolio-button-background;
-  
-    /*мобильный*/
-    @media screen and (min-width: $mobile) {
-      padding: 25px 190px;
-      max-width: 450px;
-    }
-  
-    /*планшет*/
-    @media screen and (min-width: $tablet) {
-      padding: 25px 142px;
-      width: 354px;
-    }
-  
-    /*ноут*/
-    @media screen and (min-width: $desctop) {
-      padding: 20px 100px;
-      width: 270px;
-    }
+
+  /*планшет*/
+  @media screen and (min-width: $tablet) {
+    flex-basis: calc(100% / 2 - #{$card-set-gap});
+    margin-top: $card-set-gap;
+    margin-left: $card-set-gap;
   }
-  
-  /*заголовки*/
-  .features__subtitle {
-    margin-bottom: 10px;
-  
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 1.14;
-    text-transform: uppercase;
+
+  /*ноут*/
+  @media screen and (min-width: $desctop) {
+    flex-basis: calc(100% / 4 - #{$card-set-gap});
   }
-  
-  /*текст*/
-  .features__descr {
-    color: $text-color;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 1.71;
+}
+
+/*иконки*/
+.features__icon {
+  margin-bottom: #{$card-set-gap};
+  max-height: 120px;
+  padding: 25px 110px;
+  max-width: 350px;
+
+  background-color: $portfolio-button-background;
+
+  /*мобильный*/
+  @media screen and (min-width: $mobile) {
+    padding: 25px 190px;
+    max-width: 450px;
   }
+
+  /*планшет*/
+  @media screen and (min-width: $tablet) {
+    padding: 25px 142px;
+    width: 354px;
+  }
+
+  /*ноут*/
+  @media screen and (min-width: $desctop) {
+    padding: 20px 100px;
+    width: 270px;
+  }
+}
+
+/*заголовки*/
+.features__subtitle {
+  margin-bottom: 10px;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+}
+
+/*текст*/
+.features__descr {
+  color: $text-color;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+}
