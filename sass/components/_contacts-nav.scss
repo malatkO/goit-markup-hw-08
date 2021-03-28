@@ -1,28 +1,37 @@
+/*обратная связь*/
 .contacts-nav {
-    display: none;
-    margin: 0;
-    margin-left: auto;
-    padding: 0;
-    white-space: nowrap;
+  display: none;
+  margin: 0;
+  margin-left: auto;
+  padding: 0;
+  white-space: nowrap;
 
-    @media screen and (min-width: $tablet) {
-      display: flex;
-      flex-direction: column;
-  
-      font-size: 12px;
-      line-height: 1.167;
-    }
-    /*ноут*/
-    @media screen and (min-width: $desctop) {
-      flex-direction: row;
-  
-      font-size: 14px;
-      line-height: 1.14;
-    }
-  }
-  
   /*планшет*/
-  .contacts-nav__item:not(:first-child) {
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    flex-direction: column;
+
+    font-size: 12px;
+    line-height: 1.167;
+  }
+  /*ноут*/
+  @media screen and (min-width: $desctop) {
+    flex-direction: row;
+
+    font-size: 14px;
+    line-height: 1.14;
+  }
+}
+
+/*планшет*/
+.contacts-nav__item:not(:last-child) {
+  @media screen and (min-width: $tablet) and (max-width: 1199px) {
+    margin-bottom: 10px;
+  }
+}
+
+/*ноут*/
+.contacts-nav__item:not(:first-child) {
   @media screen and (min-width: $desctop) {
     margin-left: 30px;
   }
