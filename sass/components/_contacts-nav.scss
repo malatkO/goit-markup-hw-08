@@ -1,0 +1,76 @@
+.contacts-nav {
+    display: none;
+    margin: 0;
+    margin-left: auto;
+    padding: 0;
+    white-space: nowrap;
+
+    @media screen and (min-width: $tablet) {
+      display: flex;
+      flex-direction: column;
+  
+      font-size: 12px;
+      line-height: 1.167;
+    }
+    /*ноут*/
+    @media screen and (min-width: $desctop) {
+      flex-direction: row;
+  
+      font-size: 14px;
+      line-height: 1.14;
+    }
+  }
+  
+  /*планшет*/
+  .contacts-nav__item:not(:first-child) {
+  @media screen and (min-width: $desctop) {
+    margin-left: 30px;
+  }
+}
+
+.contacts-nav__link {
+  display: flex;
+  align-items: center;
+
+  color: $text-color;
+
+  transition: color 250ms $timing-fn;
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+    outline: none;
+  }
+}
+
+/*иконки*/
+.contacts-nav__icon {
+  margin-right: 8px;
+  fill: currentColor;
+
+  /*планшет*/
+  @media screen and (min-width: $tablet) {
+    margin-right: 10px;
+  }
+}
+
+.contacts-nav__icon--envelope {
+  width: 14px;
+  height: 10px;
+
+  /*ноут*/
+  @media screen and (min-width: $desctop) {
+    width: 16px;
+    height: 12px;
+  }
+}
+.contacts-nav__icon--mobile {
+  width: 10px;
+  height: 14px;
+
+  /*ноут*/
+  @media screen and (min-width: $desctop) {
+    width: 10px;
+    height: 16px;
+  }
+}

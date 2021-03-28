@@ -1,0 +1,96 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  background-color: rgba(0, 0, 0, 0.2);
+
+  transition: opacity 500ms $timing-fn;
+  overflow-y: scroll;
+
+  /*мобильный*/
+  @media screen and (max-width: 767px) {
+    padding-top: 93px;
+    padding-bottom: 94px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  /*планшет+ноут*/
+  @media screen and (min-width: $tablet) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 101;
+  }
+}
+
+.backdrop.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/*модальное окно*/
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  min-width: 320px;
+  min-height: 500px;
+
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+
+  background-color: $white-сolor;
+
+  /*мобильный 480px*/
+  @media screen and (min-width: $mobile) {
+    min-width: 450px;
+    min-height: 609px;
+  }
+
+  /*ноут*/
+  @media screen and (min-width: $desctop) {
+    min-width: 528px;
+    min-height: 581px;
+  }
+}
+
+/*кнопка закрытия модального окна*/
+.button-close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  cursor: pointer;
+
+  padding: 0;
+  width: 30px;
+  height: 30px;
+
+  border: none;
+  border-radius: 50%;
+  line-height: 0;
+
+  transition: color 250ms $timing-fn;
+
+  &:hover {
+    color: $accent-color;
+  }
+
+  /*тень кнопки закрытия при фокусе*/
+  &:focus {
+    color: $accent-color;
+    outline: none;
+    box-shadow: 0 0 0 1px $accent-color;
+  }
+
+  &--color {
+    fill: currentColor;
+  }
+}
